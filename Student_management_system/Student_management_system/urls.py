@@ -28,3 +28,4 @@ urlpatterns = [
     path('doLogout', views.doLogout,name='logout'),
     path('Profile', views.PROFILE,name='profile'),
 ]  + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
