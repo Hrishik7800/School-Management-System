@@ -22,10 +22,17 @@ from .import views,HOD_views,Staff_views,Student_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('base/', views.BASE,name='base'),
+    
+    
     path('', views.LOGIN,name='login'),
     path('doLogin', views.doLogin, name='doLogin'),
-    path('Hod/Home', HOD_views.HOME,name='hod_home'),
+   
+
     path('doLogout', views.doLogout,name='logout'),
     path('Profile', views.PROFILE,name='profile'),
+    path('Profile/update', views.PROFILE_UPDATE,name='profile_update'),
+
+
+    path('Hod/Home', HOD_views.HOME,name='hod_home'),
 ]  + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
